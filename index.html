@@ -54,24 +54,26 @@
     <div class="update-mssg"></div>
   </form>
 </div>
-<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCcwTZ3geybv5caDhksUDOq0hpwbllsIXM",
-    authDomain: "witcher-chat-app.firebaseapp.com",
-    databaseURL: "https://witcher-chat-app.firebaseio.com",
-    projectId: "witcher-chat-app",
-    storageBucket: "witcher-chat-app.appspot.com",
-    messagingSenderId: "513284450740",
-    appId: "1:513284450740:web:a959f98a0da06d343d2ae1"
-  };
-  firebase.initializeApp(config);
-  const db = firebase.firestore();
-</script>
-  <script src="scripts/chat.js"></script>
-  <script src="scripts/ui.js"></script>
-  <script src="scripts/app.js"></script>
+
+  <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCcwTZ3geybv5caDhksUDOq0hpwbllsIXM",
+      authDomain: "witcher-chat-app.firebaseapp.com",
+      databaseURL: "https://witcher-chat-app.firebaseio.com",
+      projectId: "witcher-chat-app",
+      storageBucket: "witcher-chat-app.appspot.com",
+      messagingSenderId: "513284450740",
+      appId: "1:513284450740:web:a959f98a0da06d343d2ae1"
+    };
+    firebase.initializeApp(config);
+    const db = firebase.firestore();
+  </script>
+    <script src="scripts/chat.js"></script>
+    <script src="scripts/ui.js"></script>
+    <script src="scripts/app.js"></script>
 </body>
 </html>

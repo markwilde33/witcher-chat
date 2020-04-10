@@ -29,18 +29,20 @@ class Chatroom {
   // real time listener for changes in the database
   getChats(callback){
     this.chats
-      .onSnapshot(snapshot => {
-        snapshot.docChanges().forEach(change => {
-          if(change.type === 'added'){
-            // update the ui
-            callback(change.doc.data())
-          }
-        })
+    .where('room', '==', this.room)
+    .orderBy('created_at')
+    .onSnapshot(snapshot => {
+      snapshot.docChanges().forEach(change => {
+        if(change.type === 'added'){
+          // update the ui
+          callback(change.doc.data())
+        }
       });
+    });
   }
 }
 
-const chatroom = new Chatroom('gaming','shaun');
+const chatroom = new Chatroom('witchers','shaun');
 
 chatroom .getChats((data) => {
   console.log(data);
